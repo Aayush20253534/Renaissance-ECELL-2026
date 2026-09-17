@@ -539,9 +539,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Soft top & bottom gradient vignettes for seamless edge blending */}
-        <div className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-b from-[#020610] to-transparent pointer-events-none z-10" />
-        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#020610] to-transparent pointer-events-none z-10" />
+        {/* Extended Top & Bottom Seamless Dark Blur Vignettes */}
+        <div className="absolute -top-10 left-0 right-0 h-16 bg-gradient-to-b from-[#020610]/95 via-[#020610]/70 to-transparent backdrop-blur-md pointer-events-none z-10" />
+        <div className="absolute -bottom-10 left-0 right-0 h-16 bg-gradient-to-t from-[#020610]/95 via-[#020610]/70 to-transparent backdrop-blur-md pointer-events-none z-10" />
 
         {/* Ambient Glowing Rich Gold Backing Aura */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[240px] bg-[radial-gradient(ellipse_at_center,rgba(197,162,95,0.4)_0%,rgba(217,119,6,0.25)_40%,transparent_80%)] rounded-full blur-[110px] pointer-events-none" />
@@ -586,6 +586,8 @@ export default function Home() {
         ref={eventsSectionRef}
         className="relative w-full min-h-screen sm:h-screen bg-gradient-to-b from-[#020610]/95 via-[#04192d]/90 to-[#072545]/90 border-b border-[#38BDF8]/20 flex flex-col justify-between pt-28 sm:pt-32 pb-6 px-4 sm:px-12 overflow-hidden select-none"
       >
+        {/* Top Seamless Dark Gradient Vignette with Backdrop Blur */}
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#020610] via-[#020610]/70 to-transparent backdrop-blur-md pointer-events-none z-10" />
         {/* Dynamic Blue Blur Aura */}
         <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[550px] h-[350px] sm:h-[550px] bg-[#0284C7]/25 rounded-full blur-[100px] pointer-events-none animate-pulse" />
 
@@ -765,9 +767,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Soft top & bottom gradient vignettes for seamless edge blending */}
-        <div className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-b from-[#020610] to-transparent pointer-events-none z-10" />
-        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#020610] to-transparent pointer-events-none z-10" />
+        {/* Extended Top & Bottom Seamless Dark Blur Vignettes */}
+        <div className="absolute -top-10 left-0 right-0 h-16 bg-gradient-to-b from-[#020610]/95 via-[#020610]/70 to-transparent backdrop-blur-md pointer-events-none z-10" />
+        <div className="absolute -bottom-10 left-0 right-0 h-16 bg-gradient-to-t from-[#020610]/95 via-[#020610]/70 to-transparent backdrop-blur-md pointer-events-none z-10" />
 
         {/* Ambient Glowing Cyan Backing Aura */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[240px] bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.25)_0%,rgba(2,132,199,0.15)_50%,transparent_80%)] rounded-full blur-[110px] pointer-events-none" />
