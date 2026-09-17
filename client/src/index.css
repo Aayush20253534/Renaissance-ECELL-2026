@@ -107,6 +107,27 @@ html.lenis.lenis-stopped {
   animation-play-state: paused;
 }
 
+/* 2D Performant Atmospheric Cloud Mist Drift Animations */
+@keyframes cloudDriftSlow {
+  0% { transform: translateX(0) scale(1); opacity: 0.35; }
+  50% { transform: translateX(30px) scale(1.04); opacity: 0.55; }
+  100% { transform: translateX(0) scale(1); opacity: 0.35; }
+}
+
+@keyframes cloudDriftReverse {
+  0% { transform: translateX(0) scale(1.05); opacity: 0.4; }
+  50% { transform: translateX(-35px) scale(1); opacity: 0.6; }
+  100% { transform: translateX(0) scale(1.05); opacity: 0.4; }
+}
+
+.animate-cloud-drift {
+  animation: cloudDriftSlow 18s ease-in-out infinite;
+}
+
+.animate-cloud-drift-reverse {
+  animation: cloudDriftReverse 22s ease-in-out infinite;
+}
+
 /* Events glass cards: the gradient behind them gives the translucent panels depth. */
 .events-glass-grid {
   position: relative;

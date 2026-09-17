@@ -24,7 +24,7 @@ export default function PageTransitionShimmer() {
   const isTransitioningRef = useRef(false);
   const prevPathRef = useRef(location.pathname);
 
-  // Rapid NetraAI-style transition controller (~400ms total)
+  // Smooth atmospheric cloud mist transition (~700ms total)
   const startTransition = useCallback(
     (targetPath) => {
       if (isTransitioningRef.current) return;
@@ -45,9 +45,9 @@ export default function PageTransitionShimmer() {
           setTimeout(() => {
             setCurtainState("idle");
             isTransitioningRef.current = false;
-          }, 150);
-        }, 150);
-      }, 90);
+          }, 350);
+        }, 250);
+      }, 300);
     },
     [location.pathname, navigate]
   );
@@ -101,9 +101,9 @@ export default function PageTransitionShimmer() {
             setTimeout(() => {
               setCurtainState("idle");
               isTransitioningRef.current = false;
-            }, 150);
-          }, 150);
-        }, 90);
+            }, 350);
+          }, 250);
+        }, 300);
       }
     }
   }, [location.pathname]);
@@ -126,51 +126,65 @@ export default function PageTransitionShimmer() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.div
-          key="transition-curtain"
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: curtainState === "unveiling" ? 0 : 1,
-          }}
-          exit={{ opacity: 0 }}
-          transition={{
-            duration: curtainState === "unveiling" ? 0.15 : 0.08,
-            ease: "easeInOut",
-          }}
-          className="fixed inset-0 z-[999999] pointer-events-auto flex flex-col items-center justify-center bg-[#020610]/95 backdrop-blur-2xl"
-        >
-          {/* Ambient Ocean Cyan Glow Aura */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[240px] bg-[#38BDF8]/25 rounded-full blur-[80px] pointer-events-none" />
-
-          {/* NetraAI-style Oceanic Transition Emblem */}
+        <div className="fixed inset-0 z-[999999] pointer-events-auto overflow-hidden">
+          {/* Left Cloud Mist Panel Sweep */}
           <motion.div
-            initial={{ scale: 0.94, opacity: 0, filter: "blur(3px)" }}
+            initial={{ x: "-100%" }}
             animate={{
-              scale: curtainState === "unveiling" ? 1.03 : 1,
-              opacity: curtainState === "unveiling" ? 0 : 1,
-              filter: curtainState === "unveiling" ? "blur(5px)" : "blur(0px)",
+              x: curtainState === "unveiling" ? "-100%" : "0%",
             }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
-            className="flex flex-col items-center px-4 text-center select-none"
+            exit={{ x: "-100%" }}
+            transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+            className="absolute top-0 left-0 w-1/2 h-full bg-[#020610]/95 backdrop-blur-2xl border-r border-[#C5A25F]/30"
           >
-            {/* Transparent Emblem Logo - Perfectly Sized */}
-            <div className="w-48 sm:w-64 md:w-[320px] mb-3 flex items-center justify-center">
-              <img
-                src="/renaissance-logo-clean.png"
-                alt="Renaissance 10th Edition"
-                className="w-full h-auto object-contain filter drop-shadow-[0_0_25px_rgba(56,189,248,0.6)]"
-              />
-            </div>
-
-            {/* Expanding Laser Hairline */}
-            <div className="w-44 sm:w-64 md:w-[280px] h-[1.5px] bg-gradient-to-r from-transparent via-[#38BDF8] to-transparent my-2 shadow-[0_0_12px_#38BDF8]" />
-
-            {/* Sub-caption */}
-            <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-[0.35em] text-[#38BDF8]/90 drop-shadow-md">
-              10TH EDITION • THE GREAT VOYAGE
-            </span>
+            {/* Atmospheric 2D Cloud Fog Texture */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(244,235,217,0.12)_0%,transparent_70%)] animate-cloud-drift pointer-events-none" />
           </motion.div>
-        </motion.div>
+
+          {/* Right Cloud Mist Panel Sweep */}
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{
+              x: curtainState === "unveiling" ? "100%" : "0%",
+            }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+            className="absolute top-0 right-0 w-1/2 h-full bg-[#020610]/95 backdrop-blur-2xl border-l border-[#C5A25F]/30"
+          >
+            {/* Atmospheric 2D Cloud Fog Texture */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.12)_0%,transparent_70%)] animate-cloud-drift-reverse pointer-events-none" />
+          </motion.div>
+
+          {/* Center Emblem & Gold Accent */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10">
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{
+                scale: curtainState === "unveiling" ? 1.05 : 1,
+                opacity: curtainState === "unveiling" ? 0 : 1,
+              }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="flex flex-col items-center px-4 text-center select-none"
+            >
+              {/* Transparent Emblem Logo */}
+              <div className="w-48 sm:w-64 md:w-[300px] mb-3 flex items-center justify-center">
+                <img
+                  src="/renaissance-logo-clean.png"
+                  alt="Renaissance 10th Edition"
+                  className="w-full h-auto object-contain filter drop-shadow-[0_0_30px_rgba(197,162,95,0.7)]"
+                />
+              </div>
+
+              {/* Gold Divider Line */}
+              <div className="w-36 sm:w-56 h-[1.5px] bg-gradient-to-r from-transparent via-[#C5A25F] to-transparent my-2 shadow-[0_0_12px_#C5A25F]" />
+
+              {/* Sub-caption */}
+              <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-[0.35em] text-transparent bg-clip-text bg-gradient-to-r from-[#F4EBD9] via-[#E6CA85] to-[#C5A25F]">
+                10TH EDITION • THE GREAT VOYAGE
+              </span>
+            </motion.div>
+          </div>
+        </div>
       )}
     </AnimatePresence>
   );

@@ -76,16 +76,16 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 border-white/10 px-4 py-4 sm:px-6">
-        {/* Seamless ambient marine gradient */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-28 bg-gradient-to-b from-[#020610]/80 via-[#020610]/30 to-transparent" />
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-gradient-to-b from-[#020610]/95 via-[#020610]/60 to-transparent backdrop-blur-md px-4 py-3.5 sm:px-6 sm:py-4 transition-all">
+        {/* Seamless ambient marine top gradient */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-32 bg-gradient-to-b from-[#020610]/90 via-[#020610]/40 to-transparent pointer-events-none" />
 
         <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-between">
           {/* Renaissance Logo */}
           <Link
             to="/"
             onClick={() => setIsOpen(false)}
-            className="flex items-center gap-3 px-3.5 py-1.5 rounded-2xl bg-[#030d1c]/90 border border-[#C5A25F]/40 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.7)] hover:border-[#C5A25F] transition-all"
+            className="flex items-center gap-3 transition-transform hover:scale-105"
             aria-label="Renaissance Home"
           >
             <img
@@ -95,7 +95,7 @@ export default function Navbar() {
                 event.currentTarget.src =
                   "/renaissance-logo-transparent.png";
               }}
-              className="h-7 sm:h-8 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(197,162,95,0.4)]"
+              className="h-8 sm:h-9 w-auto object-contain filter drop-shadow-[0_2px_12px_rgba(197,162,95,0.75)] drop-shadow-[0_0_15px_rgba(56,189,248,0.35)]"
             />
           </Link>
 
