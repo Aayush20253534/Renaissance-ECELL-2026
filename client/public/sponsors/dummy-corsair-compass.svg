@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="helmBrass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2DFB8"/>
+      <stop offset="50%" stop-color="#E2C997"/>
+      <stop offset="100%" stop-color="#CCA96B"/>
+    </linearGradient>
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B6914"/>
+      <stop offset="50%" stop-color="#E5C158"/>
+      <stop offset="100%" stop-color="#7B560D"/>
+    </linearGradient>
+    <filter id="helmShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0E384D" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect x="15" y="15" width="370" height="210" rx="18" fill="url(#helmBrass)" stroke="url(#goldRim)" stroke-width="2.5" filter="url(#helmShadow)"/>
+  <rect x="25" y="25" width="350" height="190" rx="12" fill="none" stroke="#A8813C" stroke-width="1.2" stroke-dasharray="6,4"/>
+
+  <!-- Celestial Constellation Dots in background -->
+  <g stroke="#9C7730" stroke-width="0.8" opacity="0.45">
+    <line x1="60" y1="50" x2="85" y2="70"/>
+    <line x1="85" y1="70" x2="115" y2="60"/>
+    <circle cx="60" cy="50" r="2.5" fill="#825C1A"/>
+    <circle cx="85" cy="70" r="2" fill="#825C1A"/>
+    <circle cx="115" cy="60" r="3" fill="#825C1A"/>
+
+    <line x1="330" y1="50" x2="300" y2="65"/>
+    <line x1="300" y1="65" x2="285" y2="90"/>
+    <circle cx="330" cy="50" r="2.5" fill="#825C1A"/>
+    <circle cx="300" cy="65" r="2" fill="#825C1A"/>
+    <circle cx="285" cy="90" r="3" fill="#825C1A"/>
+  </g>
+
+  <!-- Ship's Helm & Astrolabe Wheel -->
+  <g transform="translate(200, 86)">
+    <!-- 8 Spokes with Handles -->
+    <!-- Handles projecting out -->
+    <line x1="0" y1="-44" x2="0" y2="-28" stroke="#683F15" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="0" y1="28" x2="0" y2="44" stroke="#683F15" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="-44" y1="0" x2="-28" y2="0" stroke="#683F15" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="28" y1="0" x2="44" y2="0" stroke="#683F15" stroke-width="4.5" stroke-linecap="round"/>
+
+    <line x1="-31" y1="-31" x2="-20" y2="-20" stroke="#683F15" stroke-width="4" stroke-linecap="round"/>
+    <line x1="20" y1="20" x2="31" y2="31" stroke="#683F15" stroke-width="4" stroke-linecap="round"/>
+    <line x1="20" y1="-20" x2="31" y2="-31" stroke="#683F15" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-31" y1="31" x2="-20" y2="20" stroke="#683F15" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Outer Rim -->
+    <circle r="30" fill="none" stroke="#683F15" stroke-width="5"/>
+    <circle r="30" fill="none" stroke="#D4AF37" stroke-width="1.8"/>
+
+    <!-- Inner Brass Astrolabe Rim -->
+    <circle r="22" fill="#FAF3E6" stroke="#A8813C" stroke-width="1.5"/>
+    <circle r="18" fill="none" stroke="#7A581C" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+    <!-- Inner Spokes -->
+    <line x1="0" y1="-22" x2="0" y2="22" stroke="#A8813C" stroke-width="2"/>
+    <line x1="-22" y1="0" x2="22" y2="0" stroke="#A8813C" stroke-width="2"/>
+    <line x1="-15" y1="-15" x2="15" y2="15" stroke="#A8813C" stroke-width="1.5"/>
+    <line x1="15" y1="-15" x2="-15" y2="15" stroke="#A8813C" stroke-width="1.5"/>
+
+    <!-- Center Boss -->
+    <circle r="7" fill="#8B6914" stroke="#FAF3E6" stroke-width="1.5"/>
+    <circle r="3.5" fill="#FAF3E6"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="165" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="14.5" font-weight="800" fill="#0C2B3D" letter-spacing="3.5">CORSAIR CELESTIAL</text>
+  <text x="200" y="183" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10.5" font-weight="700" fill="#8B6914" letter-spacing="4">ASTROLABE &amp; HELM</text>
+  <text x="200" y="199" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" font-weight="600" fill="#6B5120" letter-spacing="2">STARLIGHT NAVIGATION GUILD</text>
+</svg>

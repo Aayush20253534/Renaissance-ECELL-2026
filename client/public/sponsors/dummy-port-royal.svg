@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="harbourBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5EADE"/>
+      <stop offset="50%" stop-color="#E9DCCF"/>
+      <stop offset="100%" stop-color="#DAC7B5"/>
+    </linearGradient>
+    <linearGradient id="goldBrass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B6914"/>
+      <stop offset="50%" stop-color="#E5C158"/>
+      <stop offset="100%" stop-color="#7B560D"/>
+    </linearGradient>
+    <linearGradient id="lightBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFF5B8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFF5B8" stop-opacity="0.0"/>
+    </linearGradient>
+    <filter id="portShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0E384D" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="15" y="15" width="370" height="210" rx="18" fill="url(#harbourBg)" stroke="url(#goldBrass)" stroke-width="2.5" filter="url(#portShadow)"/>
+  <rect x="25" y="25" width="350" height="190" rx="12" fill="none" stroke="#AF9165" stroke-width="1.2" stroke-dasharray="6,4"/>
+
+  <!-- Lighthouse and Harbour Scene -->
+  <g transform="translate(200, 84)">
+    <!-- Sea & Cliffs -->
+    <path d="M -50 30 Q -10 25, 10 32 T 50 30" fill="none" stroke="#0E384D" stroke-width="2"/>
+    <!-- Rocky Cliff Foundation -->
+    <polygon points="-24,32 -10,12 14,12 26,32" fill="#523920" stroke="#382512" stroke-width="1.5"/>
+
+    <!-- Lighthouse Tower -->
+    <polygon points="-8,12 -5,-20 5,-20 8,12" fill="#FDF7ED" stroke="#382512" stroke-width="1.8"/>
+    <!-- Red Stripes -->
+    <polygon points="-7,4 -6,-3 6,-3 7,4" fill="#B22222"/>
+    <polygon points="-6,-12 -5,-19 5,-19 6,-12" fill="#B22222"/>
+
+    <!-- Lantern Room / Gallery -->
+    <rect x="-8" y="-23" width="16" height="3" rx="1" fill="#382512"/>
+    <rect x="-6" y="-29" width="12" height="6" rx="1" fill="#FEE08B" stroke="#382512" stroke-width="1.2"/>
+    <!-- Roof Dome & Spire -->
+    <path d="M -6 -29 Q 0 -36, 6 -29 Z" fill="#B22222" stroke="#382512" stroke-width="1.2"/>
+    <line x1="0" y1="-36" x2="0" y2="-40" stroke="#382512" stroke-width="1.5"/>
+
+    <!-- Beacon Light Beam Sweeping Out -->
+    <polygon points="4,-26 80,-42 84,-10 4,-26" fill="url(#lightBeam)"/>
+    <polygon points="-4,-26 -80,-42 -84,-10 -4,-26" fill="url(#lightBeam)" transform="scale(-1, 1)"/>
+
+    <!-- Small Anchor next to cliff -->
+    <g transform="translate(-25, 20) scale(0.6)">
+      <circle cx="0" cy="-12" r="3" fill="none" stroke="#C59B27" stroke-width="2"/>
+      <line x1="0" y1="-9" x2="0" y2="12" stroke="#C59B27" stroke-width="2.5"/>
+      <line x1="-7" y1="-4" x2="7" y2="-4" stroke="#C59B27" stroke-width="2"/>
+      <path d="M -10 6 Q 0 16, 10 6" fill="none" stroke="#C59B27" stroke-width="2.5"/>
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="165" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="14.5" font-weight="800" fill="#0C2B3D" letter-spacing="3.5">PORT ROYAL</text>
+  <text x="200" y="183" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10.5" font-weight="700" fill="#8B6914" letter-spacing="4">HARBOUR GUILD</text>
+  <text x="200" y="199" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" font-weight="600" fill="#654F2E" letter-spacing="2">FORTIFIED REFUGE &amp; PROVISIONS</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="oceanPlacque" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E1EEF0"/>
+      <stop offset="50%" stop-color="#CFE5E8"/>
+      <stop offset="100%" stop-color="#B7D7DC"/>
+    </linearGradient>
+    <linearGradient id="krakenTeal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#145A6D"/>
+      <stop offset="100%" stop-color="#082A34"/>
+    </linearGradient>
+    <linearGradient id="brassGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B27"/>
+      <stop offset="50%" stop-color="#F2D06B"/>
+      <stop offset="100%" stop-color="#9A6F27"/>
+    </linearGradient>
+    <filter id="krakenShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0E384D" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <!-- Plaque Container -->
+  <rect x="15" y="15" width="370" height="210" rx="18" fill="url(#oceanPlacque)" stroke="url(#brassGlow)" stroke-width="2.5" filter="url(#krakenShadow)"/>
+
+  <!-- Nautical Border -->
+  <rect x="25" y="25" width="350" height="190" rx="12" fill="none" stroke="#68A5B3" stroke-width="1.2" stroke-dasharray="6,4"/>
+
+  <!-- Sea Whirlpool Waves in background -->
+  <path d="M 50 140 Q 120 120, 200 140 T 350 140" fill="none" stroke="#7EBDCB" stroke-width="2" opacity="0.6"/>
+  <path d="M 40 150 Q 110 130, 200 150 T 360 150" fill="none" stroke="#68A5B3" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Kraken & Galleon Iconography -->
+  <g transform="translate(200, 88)">
+    <!-- Swirling Tentacles -->
+    <!-- Left Tentacle -->
+    <path d="M -15 35 C -35 25, -60 10, -55 -15 C -50 -35, -30 -25, -35 -5 C -40 10, -25 20, -5 32" fill="url(#krakenTeal)" stroke="#0E384D" stroke-width="1.5"/>
+    <circle cx="-50" cy="-12" r="2.5" fill="#E8F4F5" opacity="0.8"/>
+    <circle cx="-42" cy="-4" r="2" fill="#E8F4F5" opacity="0.8"/>
+    
+    <!-- Right Tentacle -->
+    <path d="M 15 35 C 35 25, 60 10, 55 -15 C 50 -35, 30 -25, 35 -5 C 40 10, 25 20, 5 32" fill="url(#krakenTeal)" stroke="#0E384D" stroke-width="1.5"/>
+    <circle cx="50" cy="-12" r="2.5" fill="#E8F4F5" opacity="0.8"/>
+    <circle cx="42" cy="-4" r="2" fill="#E8F4F5" opacity="0.8"/>
+
+    <!-- High Reach Giant Tentacle Center Left -->
+    <path d="M -5 35 C -15 10, -30 -20, -20 -40 C -15 -48, -5 -40, -10 -25 C -15 -10, -5 15, 0 35" fill="url(#krakenTeal)" stroke="#0E384D" stroke-width="1.2"/>
+
+    <!-- Central Pirate Galleon Ship Hull & Sails -->
+    <path d="M -24 15 Q 0 25, 24 15 L 18 27 Q 0 33, -18 27 Z" fill="#4A2810" stroke="#C59B27" stroke-width="1.5"/>
+    <!-- Masts -->
+    <line x1="0" y1="18" x2="0" y2="-28" stroke="#3D1E0B" stroke-width="2.5"/>
+    <line x1="-12" y1="16" x2="-12" y2="-18" stroke="#3D1E0B" stroke-width="1.8"/>
+    <line x1="12" y1="16" x2="12" y2="-18" stroke="#3D1E0B" stroke-width="1.8"/>
+    
+    <!-- Billowed Sails -->
+    <path d="M -10 -8 Q 0 -13, 10 -8 Q 0 -3, -10 -8 Z" fill="#FFF8EB" stroke="#C59B27" stroke-width="1.2"/>
+    <path d="M -8 -22 Q 0 -26, 8 -22 Q 0 -18, -8 -22 Z" fill="#FFF8EB" stroke="#C59B27" stroke-width="1"/>
+    
+    <!-- Pirate Flag -->
+    <path d="M 0 -28 L 7 -25 L 0 -22 Z" fill="#991B1B"/>
+
+    <!-- Golden Trident Accent -->
+    <path d="M 0 -34 L 0 -44 M -4 -40 L -4 -44 M 4 -40 L 4 -44 M -4 -40 L 4 -40" stroke="#C59B27" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="165" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="14.5" font-weight="800" fill="#0C2B3D" letter-spacing="3.5">KRAKEN DEEP SEA</text>
+  <text x="200" y="183" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10.5" font-weight="700" fill="#125D73" letter-spacing="4">MARITIME SYNDICATE</text>
+  <text x="200" y="199" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" font-weight="600" fill="#588593" letter-spacing="2">ABYSSAL EXPEDITION CORPS</text>
+</svg>

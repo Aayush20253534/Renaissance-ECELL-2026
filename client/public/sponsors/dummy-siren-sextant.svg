@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="sextantBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2EDEF"/>
+      <stop offset="50%" stop-color="#D0E3E6"/>
+      <stop offset="100%" stop-color="#B9D5D9"/>
+    </linearGradient>
+    <linearGradient id="bronzeTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#185E73"/>
+      <stop offset="50%" stop-color="#C59B27"/>
+      <stop offset="100%" stop-color="#104252"/>
+    </linearGradient>
+    <filter id="sextantShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0E384D" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="15" y="15" width="370" height="210" rx="18" fill="url(#sextantBg)" stroke="url(#bronzeTeal)" stroke-width="2.5" filter="url(#sextantShadow)"/>
+  <rect x="25" y="25" width="350" height="190" rx="12" fill="none" stroke="#68A2AD" stroke-width="1.2" stroke-dasharray="6,4"/>
+
+  <!-- Navigational Radio/Acoustic Rings in background -->
+  <g stroke="#68A2AD" stroke-width="0.9" fill="none" opacity="0.45">
+    <circle cx="200" cy="84" r="54" stroke-dasharray="4,4"/>
+    <circle cx="200" cy="84" r="64" stroke-dasharray="2,5"/>
+  </g>
+
+  <!-- Brass Sextant & Acoustic Maritime Bells -->
+  <g transform="translate(200, 84)">
+    <!-- Arc Frame (Graduated curved scale on bottom) -->
+    <path d="M -36 28 Q 0 40, 36 28" fill="none" stroke="#9A6F27" stroke-width="5" stroke-linecap="round"/>
+    <path d="M -36 28 Q 0 40, 36 28" fill="none" stroke="#FAF2E4" stroke-width="1.8"/>
+    <!-- Degree tick marks -->
+    <line x1="-28" y1="30" x2="-28" y2="34" stroke="#0E384D" stroke-width="1"/>
+    <line x1="-14" y1="32" x2="-14" y2="37" stroke="#0E384D" stroke-width="1"/>
+    <line x1="0" y1="33" x2="0" y2="38" stroke="#0E384D" stroke-width="1"/>
+    <line x1="14" y1="32" x2="14" y2="37" stroke="#0E384D" stroke-width="1"/>
+    <line x1="28" y1="30" x2="28" y2="34" stroke="#0E384D" stroke-width="1"/>
+
+    <!-- Triangular Frame Arms -->
+    <line x1="0" y1="-26" x2="-36" y2="28" stroke="#9A6F27" stroke-width="3.5"/>
+    <line x1="0" y1="-26" x2="36" y2="28" stroke="#9A6F27" stroke-width="3.5"/>
+    <!-- Center Pivot Index Mirror -->
+    <circle cx="0" cy="-26" r="6" fill="#C59B27" stroke="#0E384D" stroke-width="1.5"/>
+    <circle cx="0" cy="-26" r="2.5" fill="#FAF2E4"/>
+
+    <!-- Index Arm with Vernier Mirror -->
+    <line x1="0" y1="-26" x2="8" y2="34" stroke="#125D73" stroke-width="2.5"/>
+    <rect x="5" y="30" width="7" height="6" rx="1.5" fill="#0C2B3D"/>
+
+    <!-- Small Telescope Sight Tube -->
+    <rect x="-24" y="-8" width="34" height="6" rx="2" transform="rotate(-15, -7, -5)" fill="#FAF2E4" stroke="#9A6F27" stroke-width="1.5"/>
+
+    <!-- Sea Waves underneath -->
+    <path d="M -48 38 Q -24 33, 0 38 T 48 38" fill="none" stroke="#125D73" stroke-width="2"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="165" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="14.5" font-weight="800" fill="#0C2B3D" letter-spacing="3.5">SIREN SOUND</text>
+  <text x="200" y="183" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10.5" font-weight="700" fill="#125D73" letter-spacing="4">SEXTANT &amp; SIGNALS</text>
+  <text x="200" y="199" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" font-weight="600" fill="#4B7785" letter-spacing="2">ACOUSTIC SUBSEA BEACONS</text>
+</svg>

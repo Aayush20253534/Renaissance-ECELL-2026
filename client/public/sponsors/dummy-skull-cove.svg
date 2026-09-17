@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="skullBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBE3D7"/>
+      <stop offset="50%" stop-color="#DFD5C5"/>
+      <stop offset="100%" stop-color="#CFC2AF"/>
+    </linearGradient>
+    <linearGradient id="bronzeBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7B560D"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#604207"/>
+    </linearGradient>
+    <filter id="skullShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0E384D" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect x="15" y="15" width="370" height="210" rx="18" fill="url(#skullBg)" stroke="url(#bronzeBorder)" stroke-width="2.5" filter="url(#skullShadow)"/>
+  <rect x="25" y="25" width="350" height="190" rx="12" fill="none" stroke="#9A8259" stroke-width="1.2" stroke-dasharray="6,4"/>
+
+  <!-- Palm Trees Silhouettes on sides -->
+  <g fill="#7A6849" opacity="0.35">
+    <path d="M 60 120 Q 65 95, 75 75 Q 85 90, 80 120 Z"/>
+    <path d="M 75 75 Q 60 68, 48 78 Q 62 72, 75 75 Z"/>
+    <path d="M 75 75 Q 85 62, 98 70 Q 86 67, 75 75 Z"/>
+    <path d="M 75 75 Q 72 58, 75 48 Q 78 58, 75 75 Z"/>
+
+    <path d="M 340 120 Q 335 95, 325 75 Q 315 90, 320 120 Z"/>
+    <path d="M 325 75 Q 340 68, 352 78 Q 338 72, 325 75 Z"/>
+    <path d="M 325 75 Q 315 62, 302 70 Q 314 67, 325 75 Z"/>
+  </g>
+
+  <!-- Classic Pirate Skull & Crossed Cutlasses -->
+  <g transform="translate(200, 84)">
+    <!-- Crossed Cutlasses -->
+    <path d="M -34 32 Q -10 12, 34 -28" stroke="#3D2912" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 34 32 Q 10 12, -34 -28" stroke="#3D2912" stroke-width="3" stroke-linecap="round"/>
+    <!-- Hilts and Guards -->
+    <circle cx="-34" cy="32" r="3" fill="#D4AF37"/>
+    <circle cx="34" cy="32" r="3" fill="#D4AF37"/>
+    <circle cx="34" cy="-28" r="2.5" fill="#3D2912"/>
+    <circle cx="-34" cy="-28" r="2.5" fill="#3D2912"/>
+
+    <!-- Pirate Skull Craniuim -->
+    <path d="M -18 -8 C -18 -26, 18 -26, 18 -8 C 18 2, 12 7, 10 14 L -10 14 C -12 7, -18 2, -18 -8 Z" fill="#FDF7ED" stroke="#4A3B2C" stroke-width="2"/>
+    
+    <!-- Pirate Eye Patch (Right Eye) -->
+    <ellipse cx="6" cy="-4" rx="5" ry="5.5" fill="#1C1813"/>
+    <line x1="-16" y1="-14" x2="16" y2="4" stroke="#1C1813" stroke-width="1.5"/>
+
+    <!-- Left Eye Socket -->
+    <ellipse cx="-6" cy="-4" rx="4.5" ry="5" fill="#1C1813"/>
+
+    <!-- Nose Cavity -->
+    <polygon points="0,3 -2,6 2,6" fill="#1C1813"/>
+
+    <!-- Teeth / Jaw -->
+    <rect x="-8" y="14" width="16" height="7" rx="2" fill="#FDF7ED" stroke="#4A3B2C" stroke-width="1.5"/>
+    <line x1="-4" y1="14" x2="-4" y2="21" stroke="#4A3B2C" stroke-width="1.2"/>
+    <line x1="0" y1="14" x2="0" y2="21" stroke="#4A3B2C" stroke-width="1.2"/>
+    <line x1="4" y1="14" x2="4" y2="21" stroke="#4A3B2C" stroke-width="1.2"/>
+
+    <!-- Captain's Crimson Bandana -->
+    <path d="M -19 -14 Q 0 -22, 19 -14 Q 10 -27, -10 -27 Z" fill="#991B1B" stroke="#681010" stroke-width="1.2"/>
+    <circle cx="-16" cy="-10" r="3.5" fill="#991B1B"/>
+    <path d="M -19 -10 Q -26 -6, -24 3" stroke="#991B1B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="165" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="14.5" font-weight="800" fill="#0C2B3D" letter-spacing="3.5">ISLE OF SKULLS</text>
+  <text x="200" y="183" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10.5" font-weight="700" fill="#7B560D" letter-spacing="4">MERCANTILE &amp; HAVEN</text>
+  <text x="200" y="199" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" font-weight="600" fill="#5E4E36" letter-spacing="2">DECENTRALIZED SMUGGLER'S COVE</text>
+</svg>

@@ -439,9 +439,9 @@ export default function Sponsors({ embedded = false }) {
                 />
               </div>
 
-              {/* Information */}
-              <div className="text-center md:text-left">
-                <div className="mb-4 flex items-center justify-center gap-3 md:justify-start">
+              {/* Information - Centre aligned */}
+              <div className="flex flex-col items-center justify-center text-center">
+                <div className="mb-4 flex items-center justify-center gap-3">
                   <span className="h-px w-8 bg-[#B58B3E]" />
                   <span
                     className="
@@ -455,6 +455,7 @@ export default function Sponsors({ embedded = false }) {
                   >
                     Presenting Partner
                   </span>
+                  <span className="h-px w-8 bg-[#B58B3E]" />
                 </div>
 
                 <h3
@@ -471,6 +472,10 @@ export default function Sponsors({ embedded = false }) {
                   {presentingSponsor.name}
                 </h3>
 
+                <span className="mt-2 inline-block rounded-full border border-[#C5A25F]/50 bg-[#E8D7C2] px-4 py-1 font-mono text-[10px] font-bold text-[#14556C]">
+                  {presentingSponsor.category}
+                </span>
+
                 <p
                   className="
                     mt-5
@@ -480,14 +485,14 @@ export default function Sponsors({ embedded = false }) {
                     leading-7
                     text-[#2C5263]
                     font-medium
+                    mx-auto
                   "
                 >
-                  Our flagship partner in this journey of ideas, collaboration,
-                  innovation and discovery. Anchoring student capital and
-                  powering Renaissance 2026.
+                  {presentingSponsor.description ||
+                    "Our flagship partner in this journey of ideas, collaboration, innovation and maritime discovery. Archiving uncharted archipelagos and powering Renaissance 2026."}
                 </p>
 
-                <div className="mt-7 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+                <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
                   <button
                     type="button"
                     onClick={() => setActiveSponsor(presentingSponsor)}
@@ -797,9 +802,8 @@ export default function Sponsors({ embedded = false }) {
               </span>
 
               <p className="font-montserrat text-xs leading-relaxed text-[#2C5263] font-medium">
-                Official partner for Renaissance 2026, sailing with the voyage
-                and empowering student entrepreneurship across all flagship
-                arenas.
+                {activeSponsor.description ||
+                  "Official fleet partner for Renaissance 2026, sailing with the voyage and empowering entrepreneurship across uncharted horizons."}
               </p>
 
               <button
@@ -986,28 +990,41 @@ function SponsorSection({
         />
 
         <div
-          className={`
+          className="
             mx-auto
             mt-14
-            grid
+            flex
+            flex-wrap
+            items-stretch
+            justify-center
+            gap-7
+            sm:gap-8
             max-w-6xl
-            ${
-              size === "large"
-                ? "grid-cols-1 gap-8 md:grid-cols-2"
-                : size === "medium"
-                ? "grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3"
-                : "grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
-            }
-          `}
+          "
         >
           {sponsors.map((sponsor, index) => (
-            <SponsorCard
+            <div
               key={`${sponsor.name}-${index}`}
-              sponsor={sponsor}
-              size={size}
-              theme={theme}
-              onInspect={() => onInspect && onInspect(sponsor)}
-            />
+              className={`
+                flex
+                justify-center
+                w-full
+                ${
+                  size === "large"
+                    ? "sm:w-[calc(50%-1.25rem)] max-w-[440px]"
+                    : size === "medium"
+                    ? "sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[370px]"
+                    : "w-[calc(50%-0.75rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]"
+                }
+              `}
+            >
+              <SponsorCard
+                sponsor={sponsor}
+                size={size}
+                theme={theme}
+                onInspect={() => onInspect && onInspect(sponsor)}
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -1016,7 +1033,7 @@ function SponsorSection({
 }
 
 /* =================================================================
-   SPONSOR CARD (Rich Sandy & Oceanic Tones, No White)
+   SPONSOR CARD (Rich Sandy & Oceanic Tones, Centre Aligned)
 ================================================================= */
 
 function SponsorCard({ sponsor, size = "medium", theme = "sandy", onInspect }) {
@@ -1031,6 +1048,10 @@ function SponsorCard({ sponsor, size = "medium", theme = "sandy", onInspect }) {
         sponsor-card
         group
         relative
+        w-full
+        flex
+        flex-col
+        justify-between
         overflow-hidden
         rounded-[22px]
         border
@@ -1078,8 +1099,8 @@ function SponsorCard({ sponsor, size = "medium", theme = "sandy", onInspect }) {
           flex
           items-center
           justify-center
-          p-6
-          ${isLarge ? "h-[240px]" : isSmall ? "h-[140px]" : "h-[185px]"}
+          p-5
+          ${isLarge ? "h-[240px]" : isSmall ? "h-[145px]" : "h-[190px]"}
         `}
       >
         {/* Subtle Nautical Chart Texture in the Card */}
@@ -1088,14 +1109,14 @@ function SponsorCard({ sponsor, size = "medium", theme = "sandy", onInspect }) {
           style={{ backgroundImage: "url('/ship-map-hero.jpg')" }}
         />
 
-        {/* Logo Plaque (Sandy/Oceanic Tint, Not Stark White!) */}
+        {/* Logo Plaque (Sandy/Oceanic Tint) */}
         <div
           className={`
             relative
             z-10
             flex
-            h-[76%]
-            w-[82%]
+            h-[80%]
+            w-[86%]
             items-center
             justify-center
             rounded-xl
@@ -1105,7 +1126,7 @@ function SponsorCard({ sponsor, size = "medium", theme = "sandy", onInspect }) {
                 ? "border-[#99C5CF] bg-[#E8F2F3]"
                 : "border-[#D0B78B] bg-[#F5EAD9]"
             }
-            p-4
+            p-3
             shadow-[0_4px_16px_rgba(20,55,70,0.08)]
             transition-all
             duration-300
@@ -1155,35 +1176,45 @@ function SponsorCard({ sponsor, size = "medium", theme = "sandy", onInspect }) {
         </div>
       </div>
 
-      {/* Card Information */}
-      <div className={`relative ${isLarge ? "p-6 sm:p-7" : isSmall ? "p-4" : "p-5"}`}>
-        <div className="mb-2.5 flex items-center gap-2">
-          <span className="h-px w-6 bg-[#B58B3E]/60" />
-          <span className="h-1.5 w-1.5 rotate-45 bg-[#8E6422]" />
-          <span className="h-px w-6 bg-[#B58B3E]/60" />
-        </div>
-
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <h3 className="font-cinzel text-lg font-bold text-[#0C2B3D] transition-colors group-hover:text-[#8E6422] sm:text-xl">
-              {sponsor.name}
-            </h3>
-            <p
-              className={`mt-1 font-mono text-[10px] uppercase tracking-wider font-bold ${
-                isOceanic ? "text-[#125D73]" : "text-[#855D1E]"
-              }`}
-            >
-              {sponsor.category}
-            </p>
+      {/* Card Information - Centre Aligned */}
+      <div
+        className={`relative flex flex-1 flex-col items-center justify-between text-center ${
+          isLarge ? "p-6 sm:p-7" : isSmall ? "p-4" : "p-5"
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center text-center w-full">
+          {/* Centered Decorative Accent */}
+          <div className="mb-2.5 flex items-center justify-center gap-2">
+            <span className="h-px w-6 bg-[#B58B3E]/60" />
+            <span className="h-1.5 w-1.5 rotate-45 bg-[#8E6422]" />
+            <span className="h-px w-6 bg-[#B58B3E]/60" />
           </div>
-          <Anchor className="h-4 w-4 text-[#8E6422]/60 group-hover:text-[#8E6422] transition-colors shrink-0" />
+
+          <h3 className="font-cinzel text-lg font-bold text-[#0C2B3D] transition-colors group-hover:text-[#8E6422] sm:text-xl">
+            {sponsor.name}
+          </h3>
+
+          <p
+            className={`mt-1 font-mono text-[10px] uppercase tracking-wider font-bold ${
+              isOceanic ? "text-[#125D73]" : "text-[#855D1E]"
+            }`}
+          >
+            {sponsor.category}
+          </p>
+
+          {sponsor.description && (
+            <p className="mt-2 text-xs font-montserrat text-[#315768] font-medium leading-relaxed max-w-[280px] line-clamp-2">
+              {sponsor.description}
+            </p>
+          )}
         </div>
 
         <div
-          className={`mt-4 flex items-center justify-between border-t ${
+          className={`mt-4 flex items-center justify-center gap-2 border-t ${
             isOceanic ? "border-[#BCD8DE]" : "border-[#DDCBBA]"
-          } pt-3 text-[10px] font-mono font-bold text-[#8E6422]`}
+          } pt-3 text-[10px] font-mono font-bold text-[#8E6422] group-hover:text-[#0C2B3D] transition-colors w-full`}
         >
+          <Anchor className="h-3.5 w-3.5 text-[#8E6422]" />
           <span>Inspect Fleet Dossier</span>
           <span>→</span>
         </div>

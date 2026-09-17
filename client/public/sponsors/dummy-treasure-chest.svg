@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="vaultGoldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF1D6"/>
+      <stop offset="50%" stop-color="#F2DFB8"/>
+      <stop offset="100%" stop-color="#E2C997"/>
+    </linearGradient>
+    <linearGradient id="solidGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#996515"/>
+      <stop offset="50%" stop-color="#F5CE58"/>
+      <stop offset="100%" stop-color="#82530C"/>
+    </linearGradient>
+    <filter id="chestShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0E384D" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect x="15" y="15" width="370" height="210" rx="18" fill="url(#vaultGoldBg)" stroke="url(#solidGold)" stroke-width="2.5" filter="url(#chestShadow)"/>
+  <rect x="25" y="25" width="350" height="190" rx="12" fill="none" stroke="#C59B27" stroke-width="1.2" stroke-dasharray="6,4"/>
+
+  <!-- Overflowing Pirate Treasure Chest -->
+  <g transform="translate(200, 84)">
+    <!-- Gold Doubloon Pile on bottom -->
+    <ellipse cx="0" cy="24" rx="42" ry="12" fill="#E5B834" opacity="0.6"/>
+    <!-- Loose coins -->
+    <circle cx="-32" cy="22" r="6" fill="#F3CA47" stroke="#996515" stroke-width="1"/>
+    <circle cx="-22" cy="25" r="5" fill="#F3CA47" stroke="#996515" stroke-width="1"/>
+    <circle cx="25" cy="24" r="5.5" fill="#F3CA47" stroke="#996515" stroke-width="1"/>
+    <circle cx="34" cy="20" r="5" fill="#F3CA47" stroke="#996515" stroke-width="1"/>
+
+    <!-- Chest Lower Body -->
+    <path d="M -26 4 L 26 4 L 23 24 L -23 24 Z" fill="#542E11" stroke="#A8813C" stroke-width="2"/>
+    <!-- Iron/Gold Straps -->
+    <line x1="-16" y1="4" x2="-14" y2="24" stroke="#F3CA47" stroke-width="2"/>
+    <line x1="16" y1="4" x2="14" y2="24" stroke="#F3CA47" stroke-width="2"/>
+
+    <!-- Open Lid Raised Up -->
+    <path d="M -28 -14 Q 0 -26, 28 -14 L 26 4 Q 0 -6, -26 4 Z" fill="#3D1F0B" stroke="#A8813C" stroke-width="2"/>
+    <!-- Lid Straps -->
+    <path d="M -16 -17 Q -10 -22, -6 -18" stroke="#F3CA47" stroke-width="2" fill="none"/>
+    <path d="M 16 -17 Q 10 -22, 6 -18" stroke="#F3CA47" stroke-width="2" fill="none"/>
+
+    <!-- Golden Light & Jewels Inside Chest -->
+    <ellipse cx="0" cy="2" rx="20" ry="7" fill="#FDF7CD"/>
+    <!-- Jewels -->
+    <circle cx="-10" cy="2" r="3.5" fill="#DC2626"/> <!-- Ruby -->
+    <circle cx="8" cy="1" r="3.5" fill="#2563EB"/>  <!-- Sapphire -->
+    <circle cx="0" cy="3" r="3" fill="#16A34A"/>   <!-- Emerald -->
+    <!-- Gold Coins inside -->
+    <circle cx="-4" cy="0" r="4" fill="#FBBF24" stroke="#B45309" stroke-width="0.8"/>
+    <circle cx="4" cy="3" r="4" fill="#FBBF24" stroke="#B45309" stroke-width="0.8"/>
+
+    <!-- Keyhole / Front Lock Plaque -->
+    <circle cx="0" cy="10" r="4" fill="#F3CA47" stroke="#8B6914" stroke-width="1"/>
+    <polygon points="-1,10 1,10 2,14 -2,14" fill="#1C1813"/>
+
+    <!-- Sparkle Stars -->
+    <path d="M -24 -6 L -22 -4 L -24 -2 L -26 -4 Z" fill="#FBBF24"/>
+    <path d="M 25 -8 L 27 -6 L 25 -4 L 23 -6 Z" fill="#FBBF24"/>
+    <path d="M 0 -24 L 2 -21 L 0 -18 L -2 -21 Z" fill="#FBBF24"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="165" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="14.5" font-weight="800" fill="#0C2B3D" letter-spacing="3.5">SUNKEN VAULT</text>
+  <text x="200" y="183" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10.5" font-weight="700" fill="#996515" letter-spacing="4">TREASURY &amp; RESERVES</text>
+  <text x="200" y="199" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" font-weight="600" fill="#695123" letter-spacing="2">GOLD DOUBLOON SOVEREIGN MINT</text>
+</svg>

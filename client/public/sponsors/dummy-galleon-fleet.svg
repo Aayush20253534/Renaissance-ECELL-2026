@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="galleonBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E9DA"/>
+      <stop offset="50%" stop-color="#E7D8C4"/>
+      <stop offset="100%" stop-color="#D7C1A5"/>
+    </linearGradient>
+    <linearGradient id="goldFiligree" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A57C26"/>
+      <stop offset="50%" stop-color="#F2CB59"/>
+      <stop offset="100%" stop-color="#916515"/>
+    </linearGradient>
+    <filter id="galleonShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0E384D" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="15" y="15" width="370" height="210" rx="18" fill="url(#galleonBg)" stroke="url(#goldFiligree)" stroke-width="2.5" filter="url(#galleonShadow)"/>
+  <rect x="25" y="25" width="350" height="190" rx="12" fill="none" stroke="#B8945A" stroke-width="1.2" stroke-dasharray="7,4"/>
+
+  <!-- Sun Rays behind Flagship -->
+  <g stroke="#D0A861" stroke-width="1.2" opacity="0.35">
+    <line x1="200" y1="80" x2="130" y2="35"/>
+    <line x1="200" y1="80" x2="160" y2="25"/>
+    <line x1="200" y1="80" x2="200" y2="20"/>
+    <line x1="200" y1="80" x2="240" y2="25"/>
+    <line x1="200" y1="80" x2="270" y2="35"/>
+  </g>
+
+  <!-- 3-Masted Grand Galleon Flagship -->
+  <g transform="translate(200, 84)">
+    <!-- Sea Waves at Hull -->
+    <path d="M -50 25 Q -25 18, 0 25 T 50 25" fill="none" stroke="#165D73" stroke-width="2.5"/>
+    <path d="M -40 30 Q -20 23, 0 30 T 40 30" fill="none" stroke="#2B7F96" stroke-width="1.5"/>
+
+    <!-- Ship Hull (Wooden planks) -->
+    <path d="M -36 15 Q 0 26, 36 15 L 28 28 Q 0 34, -28 28 Z" fill="#42250F" stroke="#B8860B" stroke-width="1.5"/>
+    <line x1="-28" y1="21" x2="28" y2="21" stroke="#2C1808" stroke-width="1"/>
+    <!-- Gun ports -->
+    <rect x="-18" y="18" width="3" height="3" fill="#110A04"/>
+    <rect x="-8" y="19" width="3" height="3" fill="#110A04"/>
+    <rect x="2" y="19" width="3" height="3" fill="#110A04"/>
+    <rect x="12" y="18" width="3" height="3" fill="#110A04"/>
+
+    <!-- 3 Masts -->
+    <line x1="0" y1="18" x2="0" y2="-36" stroke="#381D0B" stroke-width="2.8"/>
+    <line x1="-18" y1="16" x2="-18" y2="-24" stroke="#381D0B" stroke-width="2"/>
+    <line x1="18" y1="16" x2="18" y2="-24" stroke="#381D0B" stroke-width="2"/>
+    <line x1="24" y1="16" x2="38" y2="6" stroke="#381D0B" stroke-width="1.5"/> <!-- Bowsprit -->
+
+    <!-- Main Center Sails -->
+    <path d="M -12 -5 Q 0 -12, 12 -5 Q 0 2, -12 -5 Z" fill="#FFFBF2" stroke="#A8813C" stroke-width="1.2"/>
+    <path d="M -10 -19 Q 0 -25, 10 -19 Q 0 -13, -10 -19 Z" fill="#FFFBF2" stroke="#A8813C" stroke-width="1.2"/>
+    <path d="M -8 -31 Q 0 -35, 8 -31 Q 0 -27, -8 -31 Z" fill="#FFFBF2" stroke="#A8813C" stroke-width="1"/>
+
+    <!-- Fore & Aft Sails -->
+    <path d="M -26 0 Q -18 -6, -10 0 Q -18 5, -26 0 Z" fill="#FFFBF2" stroke="#A8813C" stroke-width="1"/>
+    <path d="M -24 -14 Q -18 -18, -12 -14 Q -18 -10, -24 -14 Z" fill="#FFFBF2" stroke="#A8813C" stroke-width="1"/>
+    <path d="M 10 0 Q 18 -6, 26 0 Q 18 5, 10 0 Z" fill="#FFFBF2" stroke="#A8813C" stroke-width="1"/>
+    <path d="M 12 -14 Q 18 -18, 24 -14 Q 18 -10, 12 -14 Z" fill="#FFFBF2" stroke="#A8813C" stroke-width="1"/>
+
+    <!-- Top Pennants -->
+    <polygon points="0,-36 9,-32 0,-29" fill="#B22222"/>
+    <polygon points="-18,-24 -11,-21 -18,-19" fill="#125D73"/>
+    <polygon points="18,-24 25,-21 18,-19" fill="#125D73"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="165" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="14.5" font-weight="800" fill="#0C2B3D" letter-spacing="3.5">BUCCANEER ARMADA</text>
+  <text x="200" y="183" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10.5" font-weight="700" fill="#996515" letter-spacing="4">GALLEON EXPEDITIONS</text>
+  <text x="200" y="199" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" font-weight="600" fill="#6A5126" letter-spacing="2">SEVEN SEAS CARAVAN &amp; FLEET</text>
+</svg>

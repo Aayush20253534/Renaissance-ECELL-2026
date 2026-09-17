@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="parchmentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7EEDD"/>
+      <stop offset="50%" stop-color="#ECD8BC"/>
+      <stop offset="100%" stop-color="#DFC49E"/>
+    </linearGradient>
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B8860B"/>
+      <stop offset="50%" stop-color="#F3C64D"/>
+      <stop offset="100%" stop-color="#996515"/>
+    </linearGradient>
+    <linearGradient id="oceanInk" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E384D"/>
+      <stop offset="100%" stop-color="#051B27"/>
+    </linearGradient>
+    <filter id="mapShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#07202E" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Plaque -->
+  <rect x="15" y="15" width="370" height="210" rx="18" fill="url(#parchmentGrad)" stroke="url(#goldTrim)" stroke-width="2.5" filter="url(#mapShadow)"/>
+  
+  <!-- Outer Navigation Coordinates border -->
+  <rect x="25" y="25" width="350" height="190" rx="12" fill="none" stroke="#B8945A" stroke-width="1" stroke-dasharray="8,5" opacity="0.65"/>
+
+  <!-- Corner Fleur-de-lis / Accents -->
+  <path d="M 33 33 L 45 33 M 33 33 L 33 45" stroke="#9A6F27" stroke-width="2" fill="none"/>
+  <path d="M 367 33 L 355 33 M 367 33 L 367 45" stroke="#9A6F27" stroke-width="2" fill="none"/>
+  <path d="M 33 207 L 45 207 M 33 207 L 33 195" stroke="#9A6F27" stroke-width="2" fill="none"/>
+  <path d="M 367 207 L 355 207 M 367 207 L 367 195" stroke="#9A6F27" stroke-width="2" fill="none"/>
+
+  <!-- Island Contours (Map background) -->
+  <path d="M 70 85 Q 95 65, 120 75 T 145 110 T 115 145 T 75 130 Z" fill="#D4BD99" opacity="0.45" stroke="#A88B63" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <path d="M 270 120 Q 300 95, 330 115 T 335 155 T 290 165 T 260 140 Z" fill="#D4BD99" opacity="0.45" stroke="#A88B63" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+  <!-- Dotted Voyage Route & Sea Monsters -->
+  <path d="M 95 115 Q 160 150, 200 115 T 295 135" fill="none" stroke="#9E2A2B" stroke-width="2" stroke-dasharray="5,4"/>
+  <!-- "X" Marks The Spot -->
+  <path d="M 290 130 L 300 140 M 300 130 L 290 140" stroke="#B22222" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Central Compass Rose Emblem -->
+  <g transform="translate(200, 95)">
+    <!-- Outer Ring -->
+    <circle r="44" fill="#E8D5B7" stroke="#9A6F27" stroke-width="1.8"/>
+    <circle r="38" fill="none" stroke="#8E6523" stroke-width="1" stroke-dasharray="2,3"/>
+    <circle r="32" fill="#FAF2E4" stroke="#B8860B" stroke-width="1.5"/>
+
+    <!-- 8-Point Compass Star -->
+    <!-- North -->
+    <polygon points="0,-32 5,-8 0,0" fill="#B22222"/>
+    <polygon points="0,-32 -5,-8 0,0" fill="#991B1B"/>
+    <!-- South -->
+    <polygon points="0,32 5,8 0,0" fill="#0E384D"/>
+    <polygon points="0,32 -5,8 0,0" fill="#082331"/>
+    <!-- East -->
+    <polygon points="32,0 8,5 0,0" fill="#C59B27"/>
+    <polygon points="32,0 8,-5 0,0" fill="#9A6F27"/>
+    <!-- West -->
+    <polygon points="-32,0 -8,5 0,0" fill="#C59B27"/>
+    <polygon points="-32,0 -8,-5 0,0" fill="#9A6F27"/>
+
+    <!-- Intermediate Points -->
+    <polygon points="22,-22 5,-5 0,0" fill="#D4AF37"/>
+    <polygon points="-22,-22 -5,-5 0,0" fill="#B38728"/>
+    <polygon points="22,22 5,5 0,0" fill="#D4AF37"/>
+    <polygon points="-22,22 -5,5 0,0" fill="#B38728"/>
+
+    <!-- Center Brass Pivot -->
+    <circle r="5" fill="#E5C158" stroke="#825C1A" stroke-width="1.5"/>
+    <circle r="2" fill="#825C1A"/>
+
+    <!-- Crossed Pirate Cutlasses Behind -->
+    <path d="M -28 35 Q -8 20, 28 -30" stroke="#0E384D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 28 35 Q 8 20, -28 -30" stroke="#0E384D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography: Blackbeard Cartography -->
+  <text x="200" y="168" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="14" font-weight="800" fill="#0C2B3D" letter-spacing="3.5">BLACKBEARD</text>
+  <text x="200" y="185" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10.5" font-weight="700" fill="#9A6F27" letter-spacing="4">CARTOGRAPHY &amp; CHARTS</text>
+  <text x="200" y="200" text-anchor="middle" font-family="'Courier New', monospace" font-size="7.5" font-weight="600" fill="#4B6B7C" letter-spacing="2">LAT 25° 12' N • LONG 71° 04' W</text>
+</svg>
