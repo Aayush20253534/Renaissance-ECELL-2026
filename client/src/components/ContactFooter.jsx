@@ -19,7 +19,7 @@ export default function ContactFooter() {
               onError={(e) => {
                 e.currentTarget.src = "/renaissance-logo-transparent.png";
               }}
-              className="h-10 w-auto object-contain filter drop-shadow-[0_0_15px_rgba(56,189,248,0.5)] transition-transform duration-300 group-hover:scale-105"
+              className="h-10 w-auto object-contain filter drop-shadow-[0_0_5px_rgba(255,255,255,0.95)] drop-shadow-[0_0_15px_rgba(255,255,255,0.75)] transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
